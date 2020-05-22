@@ -14,9 +14,8 @@ array.each {|element|
 }
 name_hash.each{|key, value|
   if minv_element == value
-    p key
-  else
+    return key
   end
 }
-p nil
+nil
 end
