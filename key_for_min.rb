@@ -3,18 +3,13 @@
 
 def key_for_min_value(name_hash)
 array = []
-name_hash.each {|key, value|
- array << value
-}
-minv_element = array[0]
-array.each {|element|
-  if minv_element > element
-    minv_element = element
-  end
-}
-name_hash.each{|key, value|
-  if minv_element == value
-    p key
-  end
+name_hash.each { |key, value|
+  array << value
+  array.sort
+  array.each {|element|
+    if array[0] == name_hash[key]
+      p key
+    end
+  }
 }
 end
